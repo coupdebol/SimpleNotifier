@@ -23,4 +23,51 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
-});
+})
+
+/**
+ * A simple example service that returns some data.
+ */
+.factory('Notifications', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var notifications = [
+    { 
+      id: 0, 
+      display: 'Scruff McGruff',
+      icon: 'ion-android-checkbox' 
+    },
+    { 
+      id: 1, 
+      display: 'G.I. Joe',
+      icon: 'ion-android-checkbox' 
+    },
+    { 
+      id: 2, 
+      display: 'Miss Frizzle',
+      icon: 'ion-android-checkbox-blank' 
+    },
+    { 
+      id: 3, 
+      display: 'Ash Ketchum',
+      icon: 'ion-android-checkbox' 
+    }
+  ];
+
+  return {
+    all: function() {
+      return notifications;
+    },
+    get: function(id) {
+      // Simple index lookup
+      return notifications[id];
+    }
+
+  }
+})
+
+
+
+
+;//end of file

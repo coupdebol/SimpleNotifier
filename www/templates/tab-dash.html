@@ -4,15 +4,15 @@
     
     <div class="list">
 
-	  	<div class="item  item-icon-left item-icon-right">
+	  	<div ng-repeat="(key, value) in notifications" class="item  item-icon-left item-icon-right">
 	    	
-		    	<i class="icon ion-android-checkbox"></i> 
+		    	<i class="icon {{value.icon}}"></i> 
 
-		    	I want to be a notification when I grow up!
+		    	{{value.display}}
 
 	    	
 	    		
-	    	  	<i ng-click="click()" class="icon ion-arrow-right-c"></i>
+	    	  	<i ng-click="edit({{key}})" class="icon ion-arrow-right-c"></i>
 	    	
 	  	</div>
 

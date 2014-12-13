@@ -1,9 +1,12 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-	$scope.click = function(){
-		alert('clicked on this');
+.controller('DashCtrl', function($scope, Notifications) {
+	
+	$scope.edit = function(id){
+		alert(Notifications.get(id).display);
 	};
+	$scope.notifications = Notifications.all();
+
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
